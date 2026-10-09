@@ -7,29 +7,36 @@
 export type Palette = { from: string; via: string; to: string; accent: string };
 
 export const profile = {
-  fullName: 'Dasari Venkata Ratna Sri Sushmita',
-  displayName: 'Sushmita Dasari',
-  firstName: 'SUSHMITA',
+  fullName: 'Aneesh Ganja',
+  displayName: 'Aneesh Ganja',
+  firstName: 'ANEESH',
   seriesTag: 'THE SERIES',
-  /** Fictional studio card shown at the very start of the opening sequence. */
-  originalLabel: 'A DASARI ORIGINAL',
-  role: 'Full-Stack Developer',
-  tagline: ['Full-Stack Developer', 'AI / ML', 'Java'],
+  originalLabel: 'AN ANEESH GANJA ORIGINAL',
+  role: 'Program Lead — AI Operations',
+  tagline: [
+    'Program Delivery',
+    'AI Operations',
+    'Process Transformation',
+  ],
   intro:
-    'A B.Tech Artificial Intelligence & Machine Learning student (CGPA 9.10) and full-stack developer building AI-powered platforms, payment systems and multi-tenant SaaS with Java, Python, React, Node.js and Docker.',
-  location: 'Surampalem, Andhra Pradesh',
-  email: 'sushmitadasari17@gmail.com',
+    'I build operating models, solve delivery bottlenecks, and lead AI-enabled process transformation. My work connects people, governance, and automation to make complex cross-border operations run better.',
+  location: 'Hyderabad, India',
+  email: 'aneesh.ganja@outlook.com',
   links: {
-    linkedin: 'https://www.linkedin.com/in/sushmita-dasari-227a40284/',
-    github: 'https://github.com/Sushmitadasari',
+    linkedin: 'https://www.linkedin.com/in/aneeshganja/',
+    github: 'https://github.com/Aneeshg-del',
   },
-  resumePdf: '/assets/Sushmita_Dasari_Resume.pdf',
+  resumePdf: '/assets/Aneesh_Ganja_Resume.pdf',
   portrait: {
-    src: '/assets/portrait-720.webp',
-    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
-    alt: 'Portrait of Sushmita Dasari',
+    src: '/assets/aneesh-portrait.jpeg',
+    srcSet: '/assets/aneesh-portrait.jpeg 1254w',
+    alt: 'Aneesh Ganja wearing a navy blazer',
   },
-  interests: ['System Design', 'Cloud Computing (AWS)', 'Machine Learning'],
+  interests: [
+    'Operating Model Design',
+    'AI-Enabled Transformation',
+    'Management Consulting',
+  ],
 };
 
 export const education = [
