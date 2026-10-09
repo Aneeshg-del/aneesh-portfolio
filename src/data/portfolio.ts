@@ -832,7 +832,7 @@ export const introSlides: IntroSlide[] = [
  * The visible names and descriptions below are personalised.
  */
 export type ProfileId =
-  | 'sushmita'
+  | 'aneesh'
   | 'recruiter'
   | 'developer'
   | 'creative';
@@ -854,7 +854,7 @@ export const viewerProfiles: {
   order: SectionId[];
 }[] = [
   {
-    id: 'sushmita',
+    id: 'aneesh',
     name: 'Aneesh',
     blurb: 'The full series, in order',
     color: '#e5132b',
