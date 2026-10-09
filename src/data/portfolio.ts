@@ -1,10 +1,50 @@
 /**
- * Central portfolio data — generated from Sushmita's resume (Sushmita_dasari.pdf).
- * Every fact on the site comes from this file. Update it here and the whole site follows.
- * Nothing here should be added unless it appears on the resume.
+ * ANEESH — THE SERIES
+ * Portfolio content based on Aneesh's supplied resume.
+ * Case studies summarise professional work, not standalone products.
  */
 
-export type Palette = { from: string; via: string; to: string; accent: string };
+export type Palette = {
+  from: string;
+  via: string;
+  to: string;
+  accent: string;
+};
+
+const crimson: Palette = {
+  from: '#24060b',
+  via: '#6e0d1d',
+  to: '#09070a',
+  accent: '#ff3d5a',
+};
+
+const amber: Palette = {
+  from: '#1c1003',
+  via: '#6b3c06',
+  to: '#0a0806',
+  accent: '#ffb547',
+};
+
+const ocean: Palette = {
+  from: '#04121f',
+  via: '#0f4c6e',
+  to: '#05080d',
+  accent: '#4cc9ff',
+};
+
+const violet: Palette = {
+  from: '#120822',
+  via: '#3d1a6e',
+  to: '#07060c',
+  accent: '#b98bff',
+};
+
+const jade: Palette = {
+  from: '#03150f',
+  via: '#0d5a40',
+  to: '#050a08',
+  accent: '#46e3a8',
+};
 
 export const profile = {
   fullName: 'Aneesh Ganja',
@@ -41,36 +81,97 @@ export const profile = {
 
 export const education = [
   {
-    school: 'Aditya Engineering College',
-    place: 'Surampalem',
-    degree: 'Bachelor of Technology — Artificial Intelligence and Machine Learning',
-    period: 'October 2023 – Present',
-    score: 'CGPA 9.10',
+    school: 'Fanshawe College',
+    place: 'London, Ontario, Canada',
+    degree: 'Post-Graduate Certificate — Business Management',
+    period: 'December 2023',
+    score: '',
   },
   {
-    school: 'Sri Chaitanya Junior College',
-    place: 'Kakinada',
-    degree: 'BIEAP — MPC',
-    period: 'June 2021 – May 2023',
-    score: 'Score 925/1000',
+    school: 'Kakatiya University',
+    place: 'Hyderabad, India',
+    degree: 'Bachelor of Business Administration (BBA)',
+    period: 'May 2021',
+    score: '',
   },
 ];
 
 export const experience = [
   {
-    company: 'Technical Hub Pvt Ltd',
-    role: 'Trainee',
-    place: 'Surampalem, AP',
-    period: 'May 2025 – June 2026',
+    company: 'Uber AI Solutions',
+    role: 'Program Lead — AI Operations',
+    place: 'Hyderabad, India · Engaged via vendor delivery partner',
+    period: 'September 2025 – Present',
     points: [
-      'Completed one year of intensive Full-Stack Development (FSD) training covering frontend, backend, database integration, and deployment workflows.',
-      'Developed responsive and functional web applications by implementing user interfaces, server-side logic, and database connectivity.',
-      'Deployed and managed web applications while applying version control, debugging, and end-to-end development practices.',
+      'Designed the operating model for a new business line: nine control gates, 40+ controls, named owners, and documented decision rules.',
+      'Scaled delivery from 31 to 165 active specialists across 30 concurrent workstreams.',
+      'Used stage-level analysis to isolate seven days of an 11-day delivery cycle as client-side scheduling, informing a joint SLA redesign.',
+      'Led LLM-in-the-loop process transformation using Google Apps Script and a hosted Claude API, contributing to a 70% reduction in cost of operations.',
+      'Authored a current-state assessment and transformation roadmap for the data science organisation.',
+      'Served as the final quality gate for a six-person delivery pod before output reached the program manager or client.',
+      'Rebuilt a mismatched workstream specification to address cost-to-serve and fill rate.',
+      'Benchmarked automated evaluation scores against human-selected outcomes before adoption.',
+    ],
+  },
+  {
+    company: 'Meedad IMC',
+    role: 'Operations & Delivery Lead',
+    place: 'Remote · Kuwait',
+    period: 'May 2024 – September 2025',
+    points: [
+      'Led resource and capacity operations for enterprise clients across North America, Australia, and the Middle East.',
+      'Delivered 40+ strategic placements and contract deployments within six months.',
+      'Rebuilt the cross-continental delivery pipeline with business unit heads, reducing turnaround time by 15 days.',
+      'Standardised cross-border compliance documentation, reducing documentation error rates by 20%.',
+    ],
+  },
+  {
+    company: 'Vialto Partners',
+    role: 'Engagement Support Specialist — Transitions & Compliance',
+    place: 'Toronto, Ontario, Canada',
+    period: 'January 2024 – May 2024',
+    points: [
+      'Managed global transition tracking and international compliance configuration for 50+ corporate assignees across North America.',
+      'Automated tracking of cross-border documentation and regulatory checkpoints, sustaining 100% audit accuracy.',
+      'Served as the primary contact for priority enterprise accounts, raising engagement satisfaction by 20%.',
+    ],
+  },
+  {
+    company: 'LeafFilter',
+    role: 'Field Operations Representative',
+    place: 'London, Ontario, Canada · Alongside postgraduate study',
+    period: 'May 2023 – December 2023',
+    points: [
+      'Built real-time pipeline tracking integrated with internal CRM, improving workflow data accuracy by 20%.',
+      'Conducted stakeholder consultations and account reconciliation.',
+    ],
+  },
+  {
+    company: 'ANSR',
+    role: 'Process Integration Analyst — GCC Build & Operations',
+    place: 'Hyderabad, India',
+    period: 'August 2022 – April 2023',
+    points: [
+      'Supported Global Capability Centre establishment for consulting and technology enterprises entering India.',
+      'Managed onboarding and process integration for 100+ roles annually, reducing cycle time by 25%.',
+    ],
+  },
+  {
+    company: 'Global Visas Ltd',
+    role: 'Operations & Compliance Manager',
+    place: 'Hyderabad, India',
+    period: 'June 2021 – July 2022',
+    points: [
+      'Managed international compliance, cross-border payroll setup, and transition frameworks for 70+ overseas assignees.',
+      'Restructured compliance data controls, reducing workflow latency by 40%.',
     ],
   },
 ];
 
-export type Metric = { value: string; label: string };
+export type Metric = {
+  value: string;
+  label: string;
+};
 
 export type Project = {
   id: string;
@@ -82,7 +183,6 @@ export type Project = {
   build: string[];
   features: string[];
   metrics: Metric[];
-  /** Omit when the repository isn't public — the GitHub button is hidden instead of linking to a 404. */
   github?: string;
   palette: Palette;
   motif: 'shield' | 'flow' | 'tenants';
@@ -90,88 +190,104 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'policyguard-ai',
-    title: 'PolicyGuard AI',
-    year: '2026',
-    genre: 'AI • NLP • LLM',
-    logline: 'An AI-powered policy analysis platform across web, browser extension, mobile and desktop applications.',
-    stack: ['Python', 'NLP', 'LLM', 'REST API'],
+    id: 'operating-model',
+    title: 'Building the Operating Model',
+    year: '2025–2026',
+    genre: 'Case Study · Governance · Program Delivery',
+    logline:
+      'Turning a new business line into a defined delivery system with controls, ownership, and decision rules.',
+    stack: [
+      'Operating-model design',
+      'Control frameworks',
+      'Requirements management',
+      'Capacity planning',
+    ],
     build: [
-      'Built an AI-powered policy analysis platform across web, browser extension, mobile, and desktop applications, processing 500+ policy documents with 92% accuracy and reducing manual review time by 60% across 8 policy categories.',
-      'Engineered LLM-based Q&A, key-information extraction, and REST API integration for 10+ document types, enabling real-time policy insights and reducing decision turnaround time by 45%.',
+      'Designed an operating model from zero, with nine control gates and more than 40 controls.',
+      'Assigned owners and documented decision rules at each stage. The framework became the canonical programme specification for leadership, data science, and client stakeholders.',
+      'Supported delivery growth from 31 to 165 active specialists across 30 concurrent workstreams.',
     ],
     features: [
-      'LLM-based Q&A over policy documents',
-      'Key-information extraction',
-      'REST API integration for 10+ document types',
-      'Web, browser extension, mobile & desktop apps',
-      'Real-time policy insights',
+      'Named ownership at every control gate',
+      'Documented decision rules',
+      '54-line requirements register',
+      'Three-tier commercial banding',
+      'Workstream-level fulfilment targets',
     ],
     metrics: [
-      { value: '500+', label: 'policy documents processed' },
-      { value: '92%', label: 'accuracy' },
-      { value: '60%', label: 'less manual review time' },
-      { value: '45%', label: 'faster decision turnaround' },
-      { value: '8', label: 'policy categories' },
+      { value: '9', label: 'control gates' },
+      { value: '40+', label: 'documented controls' },
+      { value: '31 → 165', label: 'active specialists' },
+      { value: '30', label: 'concurrent workstreams' },
     ],
-    // The resume links to https://github.com/Sushmitadasari/PolicyGuard-AI, which is not public yet (404).
-    // Add `github: 'https://github.com/Sushmitadasari/PolicyGuard-AI',` back once the repo is public.
-    palette: { from: '#2a0610', via: '#7a0f24', to: '#0b0710', accent: '#ff3d5a' },
+    palette: crimson,
     motif: 'shield',
   },
   {
-    id: 'payment-gateway',
-    title: 'Payment Gateway System',
-    year: '2026',
-    genre: 'Full-Stack • Fintech • Microservices',
-    logline: 'A full-stack UPI & card payment gateway built around a strict payment state machine.',
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'React', 'Docker'],
+    id: 'delivery-diagnostics',
+    title: 'Finding the Real Bottleneck',
+    year: '2025–2026',
+    genre: 'Case Study · Analysis · SLA Design',
+    logline:
+      'Using stage-level evidence to turn a delivery escalation into a shared process redesign.',
+    stack: [
+      'Funnel instrumentation',
+      'Root-cause analysis',
+      'Cycle-time analysis',
+      'Stakeholder management',
+    ],
     build: [
-      'Built full-stack UPI & card payment gateway processing 1,000+ transactions at 99.8% uptime with a strict payment state machine (processing → success/failed).',
-      'Dockerized microservice architecture cut deployment setup by 70%; backend optimizations reduced API response time by 40% and tripled throughput under load.',
+      'Investigated an 11-day cycle time that had been attributed to delivery underperformance.',
+      'Stage-level analysis isolated seven days as client-side scheduling, reframing the escalation around the complete process.',
+      'Used the findings to support a joint two-sided SLA redesign and benchmarked the automation needed for a sub-24-hour target.',
     ],
     features: [
-      'UPI & card payments',
-      'Strict payment state machine (processing → success / failed)',
-      'Dockerized microservice architecture',
-      'Backend optimizations for load',
+      'Stage-by-stage cycle-time attribution',
+      'Clear separation of delivery dependencies',
+      'Evidence-led escalation handling',
+      'Joint SLA redesign',
+      'Automation requirements for the target SLA',
     ],
     metrics: [
-      { value: '1,000+', label: 'transactions processed' },
-      { value: '99.8%', label: 'uptime' },
-      { value: '70%', label: 'less deployment setup' },
-      { value: '40%', label: 'faster API response' },
-      { value: '3×', label: 'throughput under load' },
+      { value: '11 days', label: 'observed cycle time' },
+      { value: '7 days', label: 'attributed to client scheduling' },
+      { value: '<24 hours', label: 'client SLA target, not achieved result' },
     ],
-    github: 'https://github.com/Sushmitadasari/Payment-gateway-system-Project',
-    palette: { from: '#1a0d02', via: '#8a4a07', to: '#0a0806', accent: '#ffb547' },
+    palette: ocean,
     motif: 'flow',
   },
   {
-    id: 'multi-tenant-saas',
-    title: 'Multi-Tenant SaaS Platform',
-    year: '2026',
-    genre: 'SaaS • Security • DevOps',
-    logline: 'Shared-database multi-tenancy with strict tenant isolation and 4-level JWT/RBAC.',
-    stack: ['Node.js', 'React', 'PostgreSQL', 'Docker Compose'],
+    id: 'ai-transformation',
+    title: 'Automation With Oversight',
+    year: '2025–2026',
+    genre: 'Case Study · AI Operations · Transformation',
+    logline:
+      'Leading LLM-enabled workflow changes while retaining human review and decision controls.',
+    stack: [
+      'Google Apps Script',
+      'Claude API',
+      'Structured JSON',
+      'Human-in-the-loop design',
+    ],
     build: [
-      'Architected shared-database multi-tenancy for 50+ concurrent tenants with strict tenant_id isolation and 4-level JWT/RBAC, achieving zero unauthorized-access incidents across 200+ users.',
-      'Implemented Docker Compose one-command deployment, reducing environment setup time from 45 minutes to under 2 minutes.',
+      'Led the replacement of manual review, requirement matching, and integrity validation with LLM-in-the-loop pipelines.',
+      'The transformation contributed to a 70% reduction in cost of operations.',
+      'Benchmarked automated evaluation scores against human-selected outcomes, established confidence bands and a manual-review zone, and identified false negatives before adoption.',
+      'Authored a transformation roadmap with nine instrumentation gaps and a nine-priority platform build brief for the data science organisation.',
     ],
     features: [
-      'Shared-database multi-tenancy',
-      'Strict tenant_id isolation',
-      '4-level JWT / RBAC',
-      'One-command Docker Compose deployment',
+      'LLM-assisted review and requirement matching',
+      'Integrity validation',
+      'Confidence bands and manual-review routing',
+      'False-negative analysis',
+      'Risk-sequenced transformation roadmap',
     ],
     metrics: [
-      { value: '50+', label: 'concurrent tenants' },
-      { value: '200+', label: 'users' },
-      { value: '0', label: 'unauthorized-access incidents' },
-      { value: '45m → <2m', label: 'environment setup time' },
+      { value: '70%', label: 'reduction in cost of operations' },
+      { value: '9', label: 'instrumentation gaps assessed' },
+      { value: '9', label: 'platform build priorities' },
     ],
-    github: 'https://github.com/Sushmitadasari/Multi-Tenant-SaaS-Platform',
-    palette: { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' },
+    palette: violet,
     motif: 'tenants',
   },
 ];
@@ -185,177 +301,215 @@ export type Achievement = {
   link?: string;
 };
 
+// Professional outcomes, not awards or certifications.
 export const achievements: Achievement[] = [
   {
-    id: 'algouniversity',
-    title: 'Tech Fellow',
-    org: 'AlgoUniversity',
-    detail: 'Selected through competitive national selection — advanced DSA, algorithm optimization, and competitive coding.',
-    laurel: 'National Selection',
+    id: 'delivery-scale',
+    title: '31 to 165 Specialists',
+    org: 'Uber AI Solutions',
+    detail:
+      'Scaled active specialist delivery across 30 concurrent workstreams.',
+    laurel: 'Delivery Scale',
   },
   {
-    id: 'flipkart-grid',
-    title: 'Semi-Finalist',
-    org: 'Flipkart GRiD 7.0',
-    detail: 'Competed among top national engineering talent.',
-    laurel: 'Semi-Finalist',
-    link: 'https://drive.google.com/file/d/16pXA2hssyJqlYMr27wfi6U4bjKDLvh9f/view?usp=drive_link',
+    id: 'operational-efficiency',
+    title: '70% Lower Operating Cost',
+    org: 'Uber AI Solutions',
+    detail:
+      'Led AI-enabled process transformation that contributed to the reduction.',
+    laurel: 'Process Transformation',
   },
   {
-    id: 'branch-topper',
-    title: 'AIML Branch Topper',
-    org: 'B.Tech AI & ML',
-    detail: '9.24 SGPA for the semester.',
-    laurel: 'Branch Topper',
+    id: 'cross-border-delivery',
+    title: '40+ Deployments',
+    org: 'Meedad IMC',
+    detail:
+      'Delivered strategic placements and contract deployments within six months.',
+    laurel: 'Cross-Border Delivery',
   },
   {
-    id: 'competitive-coding',
-    title: '850+ Problems Solved',
-    org: 'LeetCode • GFG • CodeChef',
-    detail: 'LeetCode: 350+ DSA problems (peak rating 1442). GFG: 300+ problems (rating 1436). CodeChef: 200+ problems.',
-    laurel: 'Competitive Coding',
+    id: 'compliance-quality',
+    title: '100% Audit Accuracy',
+    org: 'Vialto Partners',
+    detail:
+      'Sustained audit accuracy through automated documentation and checkpoint tracking.',
+    laurel: 'Compliance Quality',
   },
   {
-    id: 'hackerrank',
-    title: '5-Star Badges',
-    org: 'HackerRank',
-    detail: '5-star badges in C, Python, Java, and SQL.',
-    laurel: 'Four Languages',
+    id: 'onboarding-improvement',
+    title: '25% Faster Cycle Time',
+    org: 'ANSR',
+    detail:
+      'Managed onboarding and process integration for more than 100 roles annually.',
+    laurel: 'Process Integration',
   },
 ];
 
-export type Certification = { issuer: string; name: string; link: string };
+export type Certification = {
+  issuer: string;
+  name: string;
+  link: string;
+};
 
-export const certifications: Certification[] = [
-  { issuer: 'NPTEL', name: 'Database Management System', link: 'https://drive.google.com/file/d/1MqkJHchXeaGD4S8mzPmEGxEYddAsxAjN/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Fundamentals of Artificial Intelligence', link: 'https://drive.google.com/file/d/1GqyUQ-lrE-bHaN457t6fIdssgGG4HMXf/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Deep Learning', link: 'https://drive.google.com/file/d/1PWSRP5SQDPzkoTCF3A24eIJoSpTwgsff/view?usp=sharing' },
-  { issuer: 'AWS', name: 'AWS Certified AI Practitioner', link: 'https://drive.google.com/file/d/1h8e5p0a9T6f5gBaOP2ROfwWHZfkkspGn/view?usp=drive_link' },
-  { issuer: 'AWS', name: 'AWS Academy Graduate – Cloud Foundations', link: 'https://www.credly.com/badges/2d4810f9-3dbe-444d-99b9-61312ea5e7df/public_url' },
-  { issuer: 'MongoDB', name: 'MongoDB Certified Associate Developer', link: 'https://www.credly.com/badges/fd3362bd-743a-4c4d-a68e-b1fdc5d46811/public_url' },
-  { issuer: 'GitHub', name: 'GitHub Foundations', link: 'https://drive.google.com/file/d/1o0fkCAMRWTg1oMwxlqu6t6wnOpBv66Vq/view?usp=sharing' },
-  { issuer: 'Pearson', name: 'IT Specialist – HTML and CSS', link: 'https://www.credly.com/badges/e4a55298-e396-41d8-a032-283aafe9fab7/public_url' },
-  { issuer: 'Oracle', name: 'Java Certified Foundations Associate', link: 'https://drive.google.com/file/d/1g-yyceHtLg_k2RWiOIJqH0MMcGlaH90P/view?usp=sharing' },
-  { issuer: 'Oracle', name: 'Oracle Certified Foundations Associate – Database', link: 'https://drive.google.com/file/d/10-DzabbcH2vHrI6bAohoT8czKRZMa2kV/view?usp=drive_link' },
-  { issuer: 'Cisco', name: 'HTML Essentials', link: 'https://www.credly.com/badges/eb27ca95-3b2a-4948-bef9-0385d1d49055/public_url' },
-  { issuer: 'Cisco', name: 'CSS Essentials', link: 'https://www.credly.com/badges/3b37497f-6a61-4889-af3c-ed337a460a0b/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 1', link: 'https://www.credly.com/badges/9cdd4d55-6ecc-463f-b254-811ccdd0539c/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 2', link: 'https://www.credly.com/badges/0e1b036e-4318-4c8e-b750-2aca77314442/public_url' },
-  { issuer: 'Cisco', name: 'Python Essentials 1', link: 'https://www.credly.com/badges/0e21e3eb-d8ef-4770-95d7-dcbd6f8696b1/public_url' },
-  { issuer: 'Udemy', name: 'Microsoft Azure Hands-On Training (AZ-900, AZ-104, AZ-305)', link: 'https://drive.google.com/file/d/1KrXClhY0nJ3Acxs7DioNf4Q1rpaMvgPT/view?usp=sharing' },
-];
+// No certifications were listed in the supplied resume.
+export const certifications: Certification[] = [];
 
-export type Skill = { name: string; mono: string; note?: string };
-export type SkillCategory = { id: string; title: string; subtitle: string; skills: Skill[] };
+export type Skill = {
+  name: string;
+  mono: string;
+  note?: string;
+};
+
+export type SkillCategory = {
+  id: string;
+  title: string;
+  subtitle: string;
+  skills: Skill[];
+};
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'languages',
-    title: 'Languages',
-    subtitle: 'Java is the primary language',
+    id: 'program-delivery',
+    title: 'Program & Delivery',
+    subtitle: 'From operating model to execution',
     skills: [
-      { name: 'Java', mono: 'Jv', note: 'Primary' },
-      { name: 'Python', mono: 'Py' },
-      { name: 'C', mono: 'C' },
-      { name: 'C++', mono: 'C+' },
+      { name: 'Operating-model design', mono: 'OM' },
+      { name: 'Program delivery', mono: 'PD' },
+      { name: 'Capacity planning', mono: 'CP' },
+      { name: 'Risk & dependencies', mono: 'RD' },
+      { name: 'Stakeholder management', mono: 'SM' },
     ],
   },
   {
-    id: 'frontend',
-    title: 'Frontend',
-    subtitle: 'Interfaces & the web platform',
+    id: 'ai-operations',
+    title: 'AI-Enabled Operations',
+    subtitle: 'Automation with human oversight',
     skills: [
-      { name: 'React', mono: 'Re' },
-      { name: 'HTML', mono: 'Ht' },
-      { name: 'CSS', mono: 'Cs' },
-      { name: 'JavaScript', mono: 'Js' },
+      { name: 'LLM workflow automation', mono: 'AI' },
+      { name: 'Human-in-the-loop design', mono: 'HI' },
+      { name: 'Prompt engineering', mono: 'PE' },
+      { name: 'Decision thresholds', mono: 'DT' },
+      { name: 'Integrity validation', mono: 'IV' },
     ],
   },
   {
-    id: 'backend',
-    title: 'Backend',
-    subtitle: 'Server-side logic',
+    id: 'analysis',
+    title: 'Analysis & Instrumentation',
+    subtitle: 'Evidence before escalation',
     skills: [
-      { name: 'Node.js', mono: 'No' },
-      { name: 'Express.js', mono: 'Ex' },
+      { name: 'Root-cause analysis', mono: 'RC' },
+      { name: 'Cycle-time instrumentation', mono: 'CT' },
+      { name: 'SLA design', mono: 'SL' },
+      { name: 'Requirements engineering', mono: 'RE' },
+      { name: 'Cost-to-serve analysis', mono: 'CS' },
     ],
   },
   {
-    id: 'infra',
-    title: 'Infra & Tools',
-    subtitle: 'Shipping & architecture',
+    id: 'governance',
+    title: 'Governance & Compliance',
+    subtitle: 'Clear controls and accountable decisions',
     skills: [
-      { name: 'Docker', mono: 'Dk' },
-      { name: 'Docker Compose', mono: 'Dc' },
-      { name: 'REST APIs', mono: 'Ap' },
-      { name: 'Microservices', mono: 'Ms' },
-      { name: 'JWT Auth', mono: 'Jw' },
-      { name: 'Git / GitHub', mono: 'Gt' },
-      { name: 'Postman', mono: 'Pm' },
+      { name: 'Control framework design', mono: 'CF' },
+      { name: 'Audit-ready evidence', mono: 'AU' },
+      { name: 'Cross-border compliance', mono: 'CC' },
+      { name: 'Data quality controls', mono: 'DQ' },
+      { name: 'Work-eligibility governance', mono: 'WG' },
     ],
   },
   {
-    id: 'databases',
-    title: 'Databases',
-    subtitle: 'Indexing • Normalization',
+    id: 'tools',
+    title: 'Tools & Platforms',
+    subtitle: 'Practical tools behind the work',
     skills: [
-      { name: 'PostgreSQL', mono: 'Pg' },
-      { name: 'MongoDB', mono: 'Mg' },
-      { name: 'MySQL', mono: 'My' },
-    ],
-  },
-  {
-    id: 'fundamentals',
-    title: 'CS Fundamentals',
-    subtitle: 'The foundations',
-    skills: [
-      { name: 'DSA', mono: 'Ds' },
-      { name: 'OS', mono: 'Os' },
-      { name: 'CN', mono: 'Cn' },
-      { name: 'DBMS', mono: 'Db' },
-      { name: 'OOPs', mono: 'Oo' },
-      { name: 'Collections', mono: 'Co' },
-      { name: 'Multithreading', mono: 'Mt' },
-    ],
-  },
-  {
-    id: 'interests',
-    title: 'Interests',
-    subtitle: 'Coming soon to the series',
-    skills: [
-      { name: 'System Design', mono: 'Sd' },
-      { name: 'Cloud Computing (AWS)', mono: 'Aw' },
-      { name: 'Machine Learning', mono: 'Ml' },
+      { name: 'Google Apps Script', mono: 'GS' },
+      { name: 'Claude API', mono: 'CA' },
+      { name: 'Google Workspace APIs', mono: 'GW' },
+      { name: 'Excel / Google Sheets', mono: 'XL' },
+      { name: 'Structured JSON', mono: 'JS' },
+      { name: 'Jira', mono: 'Ji' },
     ],
   },
 ];
 
-/**
- * Factual cross-references shown when a skill card is hovered/tapped:
- * where the skill appears in the projects, certifications or achievements on the resume.
- */
 export const skillEvidence: Record<string, string[]> = {
-  Java: ['Oracle Java Certified Foundations Associate', 'HackerRank 5-star'],
-  Python: ['PolicyGuard AI', 'Cisco Python Essentials 1', 'HackerRank 5-star'],
-  C: ['HackerRank 5-star'],
-  React: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  HTML: ['Pearson IT Specialist – HTML and CSS', 'Cisco HTML Essentials'],
-  CSS: ['Pearson IT Specialist – HTML and CSS', 'Cisco CSS Essentials'],
-  JavaScript: ['Cisco JavaScript Essentials 1 & 2'],
-  'Node.js': ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  'Express.js': ['Payment Gateway System'],
-  Docker: ['Payment Gateway System'],
-  'Docker Compose': ['Multi-Tenant SaaS Platform'],
-  'REST APIs': ['PolicyGuard AI'],
-  Microservices: ['Payment Gateway System'],
-  'JWT Auth': ['Multi-Tenant SaaS Platform'],
-  'Git / GitHub': ['GitHub Foundations'],
-  PostgreSQL: ['Payment Gateway System', 'Multi-Tenant SaaS Platform'],
-  MongoDB: ['MongoDB Certified Associate Developer'],
-  DBMS: ['NPTEL Database Management System', 'Oracle Database Foundations'],
-  DSA: ['AlgoUniversity Tech Fellow', '850+ problems solved'],
-  'Cloud Computing (AWS)': ['AWS Certified AI Practitioner', 'AWS Academy Cloud Foundations'],
-  'Machine Learning': ['B.Tech AI & ML', 'NPTEL Deep Learning'],
+  'Operating-model design': [
+    'Designed the nine-gate operating model at Uber AI Solutions.',
+  ],
+  'Program delivery': [
+    'Scaled active delivery from 31 to 165 specialists across 30 workstreams.',
+  ],
+  'Capacity planning': [
+    'Led resource and capacity operations at Meedad IMC.',
+  ],
+  'Risk & dependencies': [
+    'Sequenced transformation gaps by severity and commercial risk.',
+  ],
+  'Stakeholder management': [
+    'Worked across programme, client, leadership, and data science stakeholders.',
+  ],
+  'LLM workflow automation': [
+    'Led LLM-assisted review, matching, and integrity-validation workflows.',
+  ],
+  'Human-in-the-loop design': [
+    'Established a manual-review zone during evaluation-tool validation.',
+  ],
+  'Prompt engineering': [
+    'Listed in the resume with anti-fabrication guardrails.',
+  ],
+  'Decision thresholds': [
+    'Established confidence bands for automated evaluation.',
+  ],
+  'Integrity validation': [
+    'Included integrity validation in the automation programme.',
+  ],
+  'Root-cause analysis': [
+    'Isolated seven days of an 11-day cycle as client-side scheduling.',
+  ],
+  'Cycle-time instrumentation': [
+    'Used funnel instrumentation to attribute delivery latency.',
+  ],
+  'SLA design': [
+    'Supported a joint two-sided SLA redesign.',
+  ],
+  'Requirements engineering': [
+    'Managed a 54-line requirements register and rebuilt a mismatched specification.',
+  ],
+  'Cost-to-serve analysis': [
+    'Reassessed seniority requirements against the actual work.',
+  ],
+  'Control framework design': [
+    'Defined nine control gates and more than 40 controls.',
+  ],
+  'Audit-ready evidence': [
+    'Sustained 100% audit accuracy at Vialto Partners.',
+  ],
+  'Cross-border compliance': [
+    'Managed international compliance and assignee transition frameworks.',
+  ],
+  'Data quality controls': [
+    'Restructured compliance controls at Global Visas Ltd.',
+  ],
+  'Work-eligibility governance': [
+    'Listed in the resume alongside background verification and contractor classification.',
+  ],
+  'Google Apps Script': [
+    'Used in LLM-in-the-loop operational pipelines.',
+  ],
+  'Claude API': [
+    'Hosted Claude API supported the automation programme.',
+  ],
+  'Google Workspace APIs': [
+    'Listed among AI-enabled operations capabilities.',
+  ],
+  'Excel / Google Sheets': [
+    'Advanced modelling, delivery telemetry, and reporting.',
+  ],
+  'Structured JSON': [
+    'Listed among workflow automation capabilities.',
+  ],
+  Jira: [
+    'Listed among governance and operational tools.',
+  ],
 };
 
 export type Episode = {
@@ -375,203 +529,322 @@ export type Season = {
   episodes: Episode[];
 };
 
-const crimson: Palette = { from: '#24060b', via: '#6e0d1d', to: '#09070a', accent: '#ff3d5a' };
-const amber: Palette = { from: '#1c1003', via: '#6b3c06', to: '#0a0806', accent: '#ffb547' };
-const ocean: Palette = { from: '#04121f', via: '#0f4c6e', to: '#05080d', accent: '#4cc9ff' };
-const violet: Palette = { from: '#120822', via: '#3d1a6e', to: '#07060c', accent: '#b98bff' };
-const jade: Palette = { from: '#03150f', via: '#0d5a40', to: '#050a08', accent: '#46e3a8' };
-
 export const seasons: Season[] = [
   {
     number: 1,
-    title: 'The Beginning',
-    period: '2021 – 2023',
-    synopsis: 'Intermediate years at Sri Chaitanya Junior College, Kakinada — Mathematics, Physics and Chemistry.',
+    title: 'The Foundations',
+    period: '2021–2023',
+    synopsis:
+      'Business education, international compliance, and process integration in India.',
     episodes: [
       {
         code: 'S01 E01',
-        title: 'The Foundation',
-        description: 'BIEAP, MPC at Sri Chaitanya Junior College, Kakinada — finishing with a score of 925/1000.',
-        tags: ['MPC', 'BIEAP'],
-        runtime: 'Jun 2021 – May 2023',
+        title: 'Business, From the Ground Up',
+        description:
+          'Completed a Bachelor of Business Administration at Kakatiya University.',
+        tags: ['Business Administration', 'Education'],
+        runtime: 'May 2021',
         palette: amber,
+      },
+      {
+        code: 'S01 E02',
+        title: 'Across Borders',
+        description:
+          'Managed compliance, payroll setup, and transition frameworks for 70+ overseas assignees at Global Visas Ltd.',
+        tags: ['Compliance', 'International Operations'],
+        runtime: 'Jun 2021 – Jul 2022',
+        palette: ocean,
+      },
+      {
+        code: 'S01 E03',
+        title: 'Building the India Operation',
+        description:
+          'Supported GCC establishment and onboarding integration at ANSR, reducing cycle time by 25%.',
+        tags: ['GCC Operations', 'Process Integration'],
+        runtime: 'Aug 2022 – Apr 2023',
+        palette: jade,
       },
     ],
   },
   {
     number: 2,
-    title: 'Enter: AI & ML',
-    period: '2023 – Present',
-    synopsis: 'B.Tech in Artificial Intelligence and Machine Learning at Aditya Engineering College, Surampalem.',
+    title: 'The Canada Chapter',
+    period: '2023–2024',
+    synopsis:
+      'Postgraduate business study alongside field operations and enterprise engagement work.',
     episodes: [
       {
         code: 'S02 E01',
-        title: 'The Engineer',
-        description: 'Bachelor of Technology in Artificial Intelligence and Machine Learning — CGPA 9.10.',
-        tags: ['B.Tech', 'AI & ML', 'CGPA 9.10'],
-        runtime: 'Oct 2023 – Present',
+        title: 'A Wider Perspective',
+        description:
+          'Completed a postgraduate certificate in Business Management at Fanshawe College in London, Ontario.',
+        tags: ['Business Management', 'Canada'],
+        runtime: 'December 2023',
         palette: violet,
       },
       {
         code: 'S02 E02',
-        title: 'The Topper',
-        description: 'AIML Branch Topper with a 9.24 SGPA for the semester.',
-        tags: ['9.24 SGPA', 'Branch Topper'],
-        runtime: 'One semester',
-        palette: crimson,
+        title: 'Closer to the Customer',
+        description:
+          'Worked in field operations at LeafFilter alongside postgraduate study, improving CRM workflow data accuracy.',
+        tags: ['CRM', 'Field Operations'],
+        runtime: 'May – Dec 2023',
+        palette: amber,
       },
       {
         code: 'S02 E03',
-        title: 'The Problem Solver',
-        description: 'LeetCode 350+ (peak 1442), GFG 300+ (1436), CodeChef 200+ and HackerRank 5-star badges in C, Python, Java and SQL.',
-        tags: ['DSA', 'LeetCode', 'GFG', 'CodeChef', 'HackerRank'],
-        runtime: '850+ problems',
-        palette: jade,
+        title: 'Transitions That Hold Together',
+        description:
+          'Managed transition tracking and compliance configuration for corporate assignees at Vialto Partners.',
+        tags: ['Global Mobility', 'Enterprise Engagement'],
+        runtime: 'Jan – May 2024',
+        palette: ocean,
       },
     ],
   },
   {
     number: 3,
-    title: 'Learning to Build',
-    period: '2025 – 2026',
-    synopsis: 'One year of intensive Full-Stack Development training as a Trainee at Technical Hub Pvt Ltd.',
+    title: 'Delivery Across Time Zones',
+    period: '2024–2025',
+    synopsis:
+      'Leading resource and capacity operations for clients across multiple regions.',
     episodes: [
       {
         code: 'S03 E01',
-        title: 'The Trainee',
-        description: 'Intensive Full-Stack Development training covering frontend, backend, database integration and deployment workflows.',
-        tags: ['FSD', 'Frontend', 'Backend', 'Databases'],
-        runtime: 'May 2025 – Jun 2026',
-        palette: ocean,
+        title: 'Connecting the Delivery Pipeline',
+        description:
+          'Led operations at Meedad IMC for enterprise clients across North America, Australia, and the Middle East.',
+        tags: ['Capacity Planning', 'Global Delivery'],
+        runtime: 'May 2024 – Sep 2025',
+        palette: jade,
       },
       {
         code: 'S03 E02',
-        title: 'The Developer',
-        description: 'Developed responsive web applications — user interfaces, server-side logic and database connectivity.',
-        tags: ['React', 'Node.js', 'Express.js'],
-        runtime: 'Technical Hub',
-        palette: violet,
-      },
-      {
-        code: 'S03 E03',
-        title: 'The Deployer',
-        description: 'Deployed and managed web applications with version control, debugging and end-to-end development practices.',
-        tags: ['Git / GitHub', 'Deployment'],
-        runtime: 'Technical Hub',
-        palette: jade,
+        title: 'Making the Process Move',
+        description:
+          'Delivered 40+ placements and deployments within six months and helped reduce pipeline turnaround by 15 days.',
+        tags: ['Delivery Improvement', 'Stakeholder Coordination'],
+        runtime: 'Meedad IMC',
+        palette: crimson,
       },
     ],
   },
   {
     number: 4,
-    title: 'Building Real Products',
-    period: '2026',
-    synopsis: 'Three Originals — an AI platform, a payment gateway and a multi-tenant SaaS — plus national-level recognition.',
+    title: 'The AI Operations Chapter',
+    period: '2025–Present',
+    synopsis:
+      'Building operating models, diagnosing bottlenecks, and leading process transformation at Uber AI Solutions.',
     episodes: [
       {
         code: 'S04 E01',
-        title: 'The AI Builder',
-        description: 'PolicyGuard AI — LLM-based Q&A and key-information extraction across 500+ policy documents at 92% accuracy.',
-        tags: ['Python', 'NLP', 'LLM'],
-        runtime: '2026',
+        title: 'Build the System',
+        description:
+          'Designed a nine-gate control framework with named owners and documented decision rules.',
+        tags: ['Operating Models', 'Governance'],
+        runtime: 'Sep 2025 – Present',
         palette: crimson,
       },
       {
         code: 'S04 E02',
-        title: 'The Architect',
-        description: 'Payment Gateway System and Multi-Tenant SaaS Platform — state machines, microservices, tenant isolation and RBAC.',
-        tags: ['Node.js', 'PostgreSQL', 'Docker'],
-        runtime: '2026',
-        palette: amber,
+        title: 'Follow the Evidence',
+        description:
+          'Used stage-level cycle-time analysis to reframe a delivery escalation and inform a joint SLA redesign.',
+        tags: ['Root-Cause Analysis', 'SLA Design'],
+        runtime: 'Uber AI Solutions',
+        palette: ocean,
       },
       {
         code: 'S04 E03',
-        title: 'The Fellow',
-        description: 'Selected as a Tech Fellow at AlgoUniversity and reached the Semi-Finals of Flipkart GRiD 7.0.',
-        tags: ['AlgoUniversity', 'Flipkart GRiD 7.0'],
-        runtime: 'National stage',
-        palette: ocean,
+        title: 'Automate With Judgment',
+        description:
+          'Led LLM-in-the-loop transformation and validated automated evaluation against human-selected outcomes.',
+        tags: ['AI Operations', 'Human Oversight'],
+        runtime: 'Uber AI Solutions',
+        palette: violet,
       },
     ],
   },
   {
     number: 5,
-    title: "What's Next",
-    period: 'Now streaming',
-    synopsis: 'The interests on the resume point to the next arc of the story.',
+    title: 'The Next Chapter',
+    period: 'Looking ahead',
+    synopsis:
+      'Building on delivery experience toward broader transformation and consulting work.',
     episodes: [
       {
         code: 'S05 E01',
-        title: 'The Next Chapter',
-        description: 'Exploring System Design, Cloud Computing (AWS) and Machine Learning.',
-        tags: ['System Design', 'AWS', 'Machine Learning'],
-        runtime: 'In production',
-        palette: violet,
+        title: 'From Operations to Transformation',
+        description:
+          'Interested in opportunities connecting program leadership, operating-model design, AI-enabled transformation, and management consulting.',
+        tags: ['Program Leadership', 'Transformation', 'Consulting'],
+        runtime: 'Career direction',
+        palette: jade,
       },
     ],
   },
 ];
 
-export type TopPick = { label: string; title: string; detail: string; palette: Palette };
+export type TopPick = {
+  label: string;
+  title: string;
+  detail: string;
+  palette: Palette;
+};
 
 export const topPicks: TopPick[] = [
-  { label: 'Primary language', title: 'Java', detail: 'Listed as primary on the resume • Oracle certified', palette: amber },
-  { label: 'The AI Original', title: 'PolicyGuard AI', detail: '500+ documents • 92% accuracy', palette: crimson },
-  { label: 'Biggest stage', title: 'Flipkart GRiD 7.0', detail: 'Semi-Finalist', palette: ocean },
-  { label: 'National selection', title: 'AlgoUniversity', detail: 'Tech Fellow', palette: violet },
-  { label: 'Academic high', title: 'Branch Topper', detail: '9.24 SGPA in AI & ML', palette: jade },
-  { label: 'Cloud credential', title: 'AWS AI Practitioner', detail: 'AWS Certified', palette: amber },
-  { label: 'Problems solved', title: '850+', detail: 'LeetCode 350+ • GFG 300+ • CodeChef 200+', palette: crimson },
-  { label: 'The training arc', title: '1 Year of FSD', detail: 'Technical Hub Pvt Ltd', palette: ocean },
-  { label: 'Database credential', title: 'MongoDB', detail: 'Certified Associate Developer', palette: jade },
-  { label: 'Current focus', title: 'System Design', detail: 'with Cloud (AWS) & Machine Learning', palette: violet },
+  {
+    label: 'Current role',
+    title: 'Program Lead',
+    detail: 'AI Operations · Uber AI Solutions',
+    palette: crimson,
+  },
+  {
+    label: 'Operating model',
+    title: '9 Control Gates',
+    detail: '40+ controls with named owners',
+    palette: violet,
+  },
+  {
+    label: 'Delivery scale',
+    title: '31 → 165',
+    detail: 'Active specialists across 30 workstreams',
+    palette: ocean,
+  },
+  {
+    label: 'Process transformation',
+    title: '70% Lower Cost',
+    detail: 'Contribution through AI-enabled workflow changes',
+    palette: jade,
+  },
+  {
+    label: 'Root-cause analysis',
+    title: 'Find the Bottleneck',
+    detail: 'Stage-level evidence informed a joint SLA redesign',
+    palette: amber,
+  },
+  {
+    label: 'Cross-border delivery',
+    title: '40+ Deployments',
+    detail: 'Placements and contracts within six months',
+    palette: ocean,
+  },
+  {
+    label: 'Compliance quality',
+    title: '100% Audit Accuracy',
+    detail: 'Documentation and checkpoint tracking at Vialto',
+    palette: jade,
+  },
+  {
+    label: 'Process integration',
+    title: '25% Faster',
+    detail: 'Onboarding cycle time at ANSR',
+    palette: crimson,
+  },
+  {
+    label: 'Education',
+    title: 'Business Management',
+    detail: 'Postgraduate certificate · Fanshawe College',
+    palette: amber,
+  },
+  {
+    label: 'Career direction',
+    title: 'Transformation',
+    detail: 'Program leadership and management consulting',
+    palette: violet,
+  },
 ];
 
-/** Slides for the "▶ Play Intro" cinematic sequence. */
-export type IntroSlide = { kicker: string; title: string; lines: string[]; chips?: string[] };
+export type IntroSlide = {
+  kicker: string;
+  title: string;
+  lines: string[];
+  chips?: string[];
+};
 
 export const introSlides: IntroSlide[] = [
   {
-    kicker: 'Education',
-    title: 'B.Tech · AI & ML',
-    lines: ['Aditya Engineering College, Surampalem', 'October 2023 – Present'],
-    chips: ['CGPA 9.10'],
+    kicker: 'Introducing',
+    title: 'Aneesh Ganja',
+    lines: [
+      'Program Lead — AI Operations',
+      'Based in Hyderabad, with experience across India and Canada.',
+    ],
+    chips: ['Program Delivery', 'AI Operations', 'Transformation'],
   },
   {
-    kicker: 'Skills',
-    title: 'Java first.',
-    lines: ['Python, C, C++ · React, Node.js, Express.js', 'PostgreSQL, MongoDB, MySQL · Docker, REST, JWT'],
-    chips: ['Java', 'Python', 'React', 'Node.js', 'Docker', 'PostgreSQL'],
+    kicker: 'The work',
+    title: 'Build the Operating Model',
+    lines: [
+      'Nine control gates. More than 40 controls.',
+      'Clear owners and decision rules at every stage.',
+    ],
+    chips: ['Governance', 'Operating Models'],
   },
   {
-    kicker: 'Training',
-    title: 'The Training Arc',
-    lines: ['One year of intensive Full‑Stack Development training', 'Trainee · Technical Hub Pvt Ltd · May 2025 – June 2026', 'Frontend · Backend · Databases · Deployment'],
+    kicker: 'The scale',
+    title: 'Make Delivery Work',
+    lines: [
+      'Scaled from 31 to 165 active specialists.',
+      'Coordinated delivery across 30 concurrent workstreams.',
+    ],
   },
   {
-    kicker: 'Projects',
-    title: 'Three Originals',
-    lines: ['PolicyGuard AI — 500+ documents, 92% accuracy', 'Payment Gateway — 1,000+ transactions, 99.8% uptime', 'Multi-Tenant SaaS — 50+ tenants, zero unauthorized access'],
+    kicker: 'The approach',
+    title: 'Follow the Evidence',
+    lines: [
+      'Diagnose where time is actually spent.',
+      'Use stage-level evidence to redesign the process.',
+    ],
+    chips: ['Root-Cause Analysis', 'SLA Design'],
   },
   {
-    kicker: 'Achievements',
-    title: 'Top Moments',
-    lines: ['Tech Fellow — AlgoUniversity', 'Semi-Finalist — Flipkart GRiD 7.0', 'AIML Branch Topper — 9.24 SGPA'],
+    kicker: 'The transformation',
+    title: 'Automate With Oversight',
+    lines: [
+      'Led LLM-enabled review, matching, and validation workflows.',
+      'Contributed to a 70% reduction in operating cost.',
+      'Validated automated evaluation before adoption.',
+    ],
+    chips: ['Apps Script', 'Claude API', 'Human Review'],
   },
   {
-    kicker: 'Certified',
-    title: '16 Certifications',
-    lines: ['AWS · MongoDB · Oracle · GitHub · Pearson', 'NPTEL · Cisco · Udemy'],
+    kicker: 'The foundation',
+    title: 'Business Across Borders',
+    lines: [
+      'Experience in delivery, compliance, and enterprise engagement.',
+      'Postgraduate Business Management — Fanshawe College.',
+      'BBA — Kakatiya University.',
+    ],
   },
   {
-    kicker: 'Current mission',
-    title: 'Now exploring',
-    lines: ['System Design · Cloud Computing (AWS) · Machine Learning'],
+    kicker: 'The next chapter',
+    title: 'Broader Transformation',
+    lines: [
+      'Bringing delivery experience to larger operational problems.',
+      'A career direction in program leadership and management consulting.',
+    ],
   },
 ];
 
-export type ProfileId = 'sushmita' | 'recruiter' | 'developer' | 'creative';
-export type SectionId = 'about' | 'journey' | 'originals' | 'picks' | 'skills' | 'moments' | 'story';
+/**
+ * Keep the existing internal IDs because other template files use them.
+ * The visible names and descriptions below are personalised.
+ */
+export type ProfileId =
+  | 'sushmita'
+  | 'recruiter'
+  | 'developer'
+  | 'creative';
+
+export type SectionId =
+  | 'about'
+  | 'journey'
+  | 'originals'
+  | 'picks'
+  | 'skills'
+  | 'moments'
+  | 'story';
 
 export const viewerProfiles: {
   id: ProfileId;
@@ -582,40 +855,93 @@ export const viewerProfiles: {
 }[] = [
   {
     id: 'sushmita',
-    name: 'Sushmita',
+    name: 'Aneesh',
     blurb: 'The full series, in order',
     color: '#e5132b',
-    order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
+    order: [
+      'about', 'journey', 'originals',
+      'picks', 'skills', 'moments', 'story',
+    ],
   },
   {
     id: 'recruiter',
     name: 'Recruiter',
-    blurb: 'Resume, achievements & skills first',
+    blurb: 'Resume, experience, and capabilities first',
     color: '#4cc9ff',
-    order: ['story', 'moments', 'skills', 'originals', 'about', 'journey', 'picks'],
+    order: [
+      'story', 'originals', 'skills',
+      'moments', 'about', 'journey', 'picks',
+    ],
   },
   {
     id: 'developer',
-    name: 'Developer',
-    blurb: 'Projects, stack & GitHub first',
+    name: 'Collaborator',
+    blurb: 'Case studies, methods, and tools first',
     color: '#46e3a8',
-    order: ['originals', 'skills', 'journey', 'moments', 'about', 'picks', 'story'],
+    order: [
+      'originals', 'skills', 'moments',
+      'journey', 'about', 'picks', 'story',
+    ],
   },
   {
     id: 'creative',
-    name: 'Creative',
-    blurb: 'The story arc & highlights first',
+    name: 'Explorer',
+    blurb: 'The career story and highlights first',
     color: '#ffb547',
-    order: ['journey', 'picks', 'originals', 'moments', 'about', 'skills', 'story'],
+    order: [
+      'journey', 'picks', 'about',
+      'originals', 'moments', 'skills', 'story',
+    ],
   },
 ];
 
-export const sectionMeta: Record<SectionId, { nav: string; card: string; meta: string; palette: Palette }> = {
-  about: { nav: 'About', card: 'About Me', meta: 'The Pilot • Education & training', palette: violet },
-  journey: { nav: 'Journey', card: 'My Journey', meta: `${seasons.length} Seasons • ${seasons.reduce((n, s) => n + s.episodes.length, 0)} Episodes`, palette: amber },
-  originals: { nav: 'Originals', card: 'My Projects', meta: `${projects.length} Originals • 2026`, palette: crimson },
-  picks: { nav: 'Top Picks', card: 'Top Picks', meta: 'Top 10 from the resume', palette: jade },
-  skills: { nav: 'Skills', card: 'My Skills', meta: `${skillCategories.length} Categories`, palette: ocean },
-  moments: { nav: 'Moments', card: 'My Achievements', meta: `${achievements.length} Moments • ${certifications.length} Certifications`, palette: crimson },
-  story: { nav: 'Resume', card: 'The Full Story', meta: 'Resume • View & download', palette: violet },
+export const sectionMeta: Record<
+  SectionId,
+  { nav: string; card: string; meta: string; palette: Palette }
+> = {
+  about: {
+    nav: 'About',
+    card: 'About Me',
+    meta: 'The Pilot · People, processes, and delivery',
+    palette: violet,
+  },
+  journey: {
+    nav: 'Journey',
+    card: 'My Journey',
+    meta: `${seasons.length} Seasons · ${seasons.reduce(
+      (total, season) => total + season.episodes.length,
+      0,
+    )} Episodes`,
+    palette: amber,
+  },
+  originals: {
+    nav: 'My Work',
+    card: 'Selected Case Studies',
+    meta: `${projects.length} Stories · Professional work`,
+    palette: crimson,
+  },
+  picks: {
+    nav: 'Highlights',
+    card: 'Career Highlights',
+    meta: '10 highlights from the story',
+    palette: jade,
+  },
+  skills: {
+    nav: 'Skills',
+    card: 'My Capabilities',
+    meta: `${skillCategories.length} Categories`,
+    palette: ocean,
+  },
+  moments: {
+    nav: 'Impact',
+    card: 'Selected Outcomes',
+    meta: `${achievements.length} Professional outcomes`,
+    palette: crimson,
+  },
+  story: {
+    nav: 'Resume',
+    card: 'The Full Story',
+    meta: 'Resume · View and download',
+    palette: violet,
+  },
 };
