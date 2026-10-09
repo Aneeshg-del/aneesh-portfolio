@@ -21,7 +21,7 @@ export default function Achievements() {
 
   return (
     <>
-      <SectionHeading kicker="Awards season" title="Top Moments" />
+      <SectionHeading kicker="Professional impact" title="Selected Outcomes" />
 
       <div className="gutter grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 [perspective:1400px]">
         {achievements.map((a, i) => (
@@ -64,7 +64,7 @@ export default function Achievements() {
       </div>
 
       {/* certifications rail */}
-      <div className="mt-16">
+      {certifications.length > 0 && <div className="mt-16">
         <div className="gutter mb-2 flex flex-wrap items-end justify-between gap-2">
           <h3 className="font-sans text-lg font-semibold text-bone sm:text-2xl">
             Certified <span className="text-mist">· {certifications.length} credentials</span>
@@ -96,7 +96,7 @@ export default function Achievements() {
           </div>
           <RailButtons rail={rail} />
         </div>
-      </div>
+      </div>}
     </>
   );
 }
